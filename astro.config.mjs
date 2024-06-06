@@ -6,6 +6,7 @@ export default defineConfig({
 	site: 'https://twistedtreedev.com',
 	integrations: [
 		starlight({
+			favicon: '/favicon.png',
 			title: 'Twisted Tree Dev',
 			sidebar: [
 				{
