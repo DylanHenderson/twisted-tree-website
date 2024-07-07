@@ -5,7 +5,7 @@ description: A reference page in my new Starlight docs site.
 
 ### INTRODUCTION
 
-Your privacy is important to us. It is our policy to respect your privacy regarding any information we may collect from you across our website. Scan Picker is an App that provides functionality to scan check orders as you pack them. This policy describes what information is collected to assist with functionality.
+Your privacy is important to us. It is our policy to respect your privacy regarding any information we may collect from you across our website. Our apps provide functionality to improve your Shopify systems. This policy describes what information is collected to assist with functionality.
 
 ### INFORMATION WE COLLECT
 

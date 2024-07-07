@@ -15,7 +15,9 @@ export default defineConfig({
 					items: [
 						//Each item here is one entry in the navigation menu.
 						
-						{ label: 'Scan Picker', link: '/scanpickerdocs/docs' },
+						{ label: 'Add barcodes to packing slips', link: '/scanpickerdocs/packingslips' },
+						{ label: 'Changelog', link: '/scanpickerdocs/changelogs' },
+
 					],
 				},
 				{
