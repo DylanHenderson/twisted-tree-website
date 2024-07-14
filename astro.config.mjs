@@ -21,6 +21,18 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Quick Scan Documentation',
+				
+					items: [
+						//Each item here is one entry in the navigation menu.
+						
+						{ label: 'Getting started', link: '/quickscandocs/gettingstarted' },
+						{ label: 'Settings adjustments', link: '/quickscandocs/settings' },
+						{ label: 'Changelog', link: '/quickscandocs/changelogs' },
+
+					],
+				},				
+				{
 					label: 'Twisted Tree',
 					autogenerate: { directory: 'twistedTree' },
 				},

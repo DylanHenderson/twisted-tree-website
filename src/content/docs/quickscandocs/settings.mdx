@@ -1,0 +1,64 @@
+---
+title: Getting Started
+description: getting started with quick scan
+---
+
+
+import settings1 from '../../../assets/settings1.png';
+import settings2 from '../../../assets/settings2.png';
+import settings3 from '../../../assets/settings3.png';
+
+
+
+
+import mobileScan from '../../../assets/mobileScan.jpg';
+import mainAction from '../../../assets/mainAction.png';
+import adjustment from '../../../assets/adjustment.png';
+
+
+
+
+import { Code } from '@astrojs/starlight/components';
+
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Image, } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+
+
+
+### Some Useful Settings
+
+<Aside type="note" title="Note">
+New settings are added to improve functionality all the time. Not all settings are shown here.
+</Aside>
+
+#### Defaults
+You can change the default operations when using Quick Stock to your most common usecase. You'll still be able to change these while adjusting quantities.
+<Image src={settings2} alt="upload file" style={{ objectFit: 'cover', marginRight: '10px' }} />
+
+
+#### Tags
+Quick scan can add or remove tags from your products after operations.
+<Image src={settings1} alt="upload file" style={{ objectFit: 'cover', marginRight: '10px' }} />
+
+#### Shopify Flow Triggers
+
+<Image src={settings3} alt="upload file" style={{ objectFit: 'cover', marginRight: '10px' }} />
+Quick Scan integrates with Shopify Flow. You'll need to enable this in settings. For now the following values are provided to a custom trigger that you will see in Shopify Flow after installing the app:
+
+
+
+* dateUTC - date and time of operation in UTC.
+* state - one of the following: available, damaged, reserved, quality_control, safety_stock.
+* reason - one of the following: correction, cycle_count_available, received, restock, damaged, shrinkage, promotion.
+* amount - a number showing the adjusted quantity.
+* locationName - the location name adjusted at.
+* locationId - the location id adjusted at.
+* variantDisplayName - the name of the product/variant adjusted.
+
+<Aside type="tip" title="Tip">
+Shopify Flow templates are coming soon! We'll showcase templates for performing common operations.
+</Aside>

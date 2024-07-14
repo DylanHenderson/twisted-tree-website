@@ -1,0 +1,76 @@
+---
+title: Getting Started
+description: getting started with quick scan
+---
+
+
+
+import mobileScan from '../../../assets/mobileScan.jpg';
+import mainAction from '../../../assets/mainAction.png';
+import adjustment from '../../../assets/adjustment.png';
+
+
+import { Code } from '@astrojs/starlight/components';
+
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Image, } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+
+
+
+## Basic Workflow
+
+<Aside type="tip" title="Tip">
+Quick Scan works right out the box but there's a few [settings](/quickscandocs/settings) you may want to adjust depending on your use case. .
+</Aside>
+
+### Choose An Operation
+
+
+Choose an operation, adjust quantity is the most common use case but you can move inventory between locations or states as well.
+
+<Image src={mainAction} alt="upload file" style={{ height: '100%', width: '100%', objectFit: 'cover', marginRight: '10px' }} />
+
+<Steps>
+
+1. Select an Operation.
+
+2. Choose the type of inventory being adjusted. Available inventory is the amount customers see when visiting your store. The other inventory types all fall under "Unavailable" inventory. This is inventory you have but are not selling.
+
+3. You can select a reason for change. This does not impact the change directly but can be useful for analysing changes made.
+
+4. The location where your change is being made.
+
+5. Here you can scan or enter a barcode. On the Shopify mobile app there will be a button to open the camera.
+
+6. You can manually search for a product if you cannot scan it.
+
+</Steps>
+
+
+
+
+<Aside type="caution" title="Note">
+Your product/variant must have the location activated to adjust or transfer inventory to it
+</Aside>
+
+
+### Make inventory adjustments for your chosen inventory item
+
+Use the next window to make adjustments to your inventory quantities.
+
+<Image src={adjustment} alt="upload file" style={{objectFit: 'contain', marginRight: '10px' }} />
+
+- Use the plus and minus buttons to adjust quantity. These changes are only saved when pressing Save.
+
+- Use the additional page actions where necessary, for example you may need to update the barcode. This happens immediately and not on Save.
+
+<Aside type="note" title="Note">
+You'll need to add your vendors in the settings to be able to change the vendor.
+</Aside>
+
+
+
