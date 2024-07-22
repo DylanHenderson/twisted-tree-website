@@ -21,7 +21,7 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Quick Scan Documentation',
+					label: 'Quick Stock Documentation',
 				
 					items: [
 						//Each item here is one entry in the navigation menu.
@@ -31,7 +31,18 @@ export default defineConfig({
 						{ label: 'Changelog', link: '/quickscandocs/changelogs' },
 
 					],
-				},				
+				},
+				{
+					label: 'Simple Calendar Documentation',
+				
+					items: [
+						//Each item here is one entry in the navigation menu.
+						
+						{ label: 'Getting started', link: '/simplecalendardocs/gettingstarted' },
+						{ label: 'Changelog', link: '/simplecalendardocs/changelogs' },
+
+					],
+				},							
 				{
 					label: 'Twisted Tree',
 					autogenerate: { directory: 'twistedTree' },

@@ -1,0 +1,99 @@
+---
+title: Getting Started
+description: getting started with Quick Stock
+---
+
+
+
+import cal1 from '../../../assets/cal/cal1.png';
+import cal2 from '../../../assets/cal/cal2.png';
+import cal3 from '../../../assets/cal/cal3.png';
+import cal4 from '../../../assets/cal/cal4.png';
+import cal5 from '../../../assets/cal/cal5.png';
+import cal6 from '../../../assets/cal/cal6.png';
+import cal7 from '../../../assets/cal/cal7.png';
+import cal8 from '../../../assets/cal/cal8.png';
+import cal9 from '../../../assets/cal/cal9.png';
+
+import mainAction from '../../../assets/mainAction.png';
+import adjustment from '../../../assets/adjustment.png';
+
+
+import { Code } from '@astrojs/starlight/components';
+
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Image, } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+
+
+
+## Link your Google Calendar to Simple Calendar
+
+<Aside type="tip" title="Tip">
+Grabbing your Google Calendar ID is the one step required for setting up Simple Calendar
+</Aside>
+
+### Adding the app to Shopify
+
+
+After installation, go to your online store.
+
+<Image src={cal1} alt="Online Store" style={{  marginRight: '10px' }} />
+
+Click customize for the theme you want to edit.
+
+<Image src={cal2} alt="Online Store" style={{  marginRight: '10px' }} />
+
+Click to add a new section, either on the left or inbetween sections on the right
+
+<Image src={cal3} alt="Online Store" style={{  marginRight: '10px' }} />
+
+Choose Simple Calendar from the Apps tab
+
+<Image src={cal4} alt="Online Store" style={{  marginRight: '10px' }} />
+
+Your initial Calendar will be empty, you need to paste your public Google calendar ID where indicated. See below on how to retrieve or create that.
+
+<Image src={cal5} alt="Online Store" style={{  marginRight: '10px' }} />
+
+### Creating or retrieving a Google Calendar ID
+
+Go to your Google Calendars https://calendar.google.com/calendar/u/0/r
+Click the + icon to create a new calendar if you need to. Follow the steps to create.
+
+
+<Image src={cal6} alt="Online Store" style={{  marginRight: '10px' }} />
+
+Afterwards click the 3 dots that appear next to an existing calendar and click "Settings and sharing"
+
+<Image src={cal7} alt="Online Store" style={{  marginRight: '10px' }} />
+
+
+You'll see setting "Access permissions for events" as seen below. You need to make sure "Make available to public" is enabled so that your customers can see your events.
+You also need to make sure "See all event details" is selected.
+
+<Image src={cal8} alt="Online Store" style={{  marginRight: '10px' }} />
+
+<Aside type="caution" title="Note">
+No events will show on your google calendar if you do not make it public
+</Aside>
+
+Copy the google calendar circled in red into the field in the Simple Calendar app.
+
+<Image src={cal9} alt="Online Store" style={{  marginRight: '10px' }} />
+
+<Aside type="caution" title="Note">
+Use the calendar ID, not any of the other links.
+</Aside>
+
+Enter it as seen below.
+
+<Image src={cal5} alt="Online Store" style={{  marginRight: '10px' }} />
+
+
+
+
+
