@@ -1,0 +1,84 @@
+---
+title: Getting Started
+description: getting started with Quick Stock
+---
+
+
+
+import cal1 from '../../../assets/cal/cal1.png';
+import cal2 from '../../../assets/cal/cal2.png';
+import cal3 from '../../../assets/cal/cal3.png';
+import cal4 from '../../../assets/cal/cal4.png';
+import cal5 from '../../../assets/cal/cal5.png';
+import cal6 from '../../../assets/cal/cal6.png';
+import cal7 from '../../../assets/cal/cal7.png';
+import cal8 from '../../../assets/cal/cal8.png';
+import cal9 from '../../../assets/cal/cal9.png';
+
+import mainAction from '../../../assets/mainAction.png';
+import adjustment from '../../../assets/adjustment.png';
+
+
+import { Code } from '@astrojs/starlight/components';
+
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Image, } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
+
+
+Scan Picker is a tool used for error checking orders while you pack them. It has a wide range of support for multiple usecases. While Scan Picker works out of the box, you'll likely need to adjust some settings to fit your store.
+
+### Decide on your order scanning process
+
+There are 3 ways to begin scanning orders.
+1. **Add order barcodes to your existing Shopify packing slips**: You will continue to print packing slips from Shopify but will now be able to scan them into Scan Picker to bring up a list of items to scan.
+2. **Use Scan Picker packing slips**: You can print customized packing slips directly from Scan Picker, these already have the order barcode for scanning.
+3. **Manually select orders from the orders list**: You can manually click to check orders from the Scan Picker orders list.
+
+<CardGrid>
+  <LinkCard title="Add barcodes to packing slips" href="/scanpickerdocs/packingslips" />
+  <LinkCard title="Scan Picker packing slips" href="/scanpickerdocs/packingslipstemplate" />
+</CardGrid>
+
+### Select whether you pack orders before or after fulfillment
+
+**Settings > Fulfillment Timing**
+
+Scan Picker needs to know whether to show you fulfilled items to pack or unfulfilled items. By default Scan Picker will assume that you fulfill your orders after packing them which happens in the majority of cases.
+
+If you sometimes pack orders before and sometimes after fulfillment, don't worry, there are settings below this choice to handle both. Just select the one you do most often.
+
+### What does a general Scan Picker workflow look like?
+
+<Steps>
+
+1. A new order comes in, ready for packing
+
+   ```js
+   import { Steps } from '@astrojs/starlight/components';
+   ```
+
+2. Print your packing slip and use your chosen scan method to scan the barcode on the packing slip with Scan Picker
+
+3. Scan each item as you pack it. Scan Picker will keep track of the items scanned and quantities.
+
+4. Order scanning completes and the item is tagged with your chosen packing tag, defaulting to "packing-checked"
+
+</Steps>
+
+### What devices can I use to scan orders?
+
+##### Wireless scanner with PC/Laptop
+Grab any wireless (or wired but wireless preferred) barcode scanner and connect to your laptop or PC setup, start scanning orders. These devices are fast and cost effective.
+
+##### Wireless bluetooth scanner with mobile device
+You can use any bluetooth barcode scanner while running Scan Picker through the shopify app. The scanner needs to be connected to your mobile device via bluetooth. 
+These scanners are a bit more on the expensive side but are fast and allow you to have the app running close at hand. **The scanner must be connected in Basic (HID) Mode. Application mode is not supported currently in Shopify embeded apps.**
+
+##### Mobile device with camera for barcode scanning
+The app allows you to use your phones camera for barcode scanning. This is not as fast as a handheld barcode scanner but works well for smaller orders. 
+Note that the scanner functionality in use is provided by Shopify, we have noticed some rare cases where barcodes can be more difficult to read through the Shopify scanner than an alternative handheld device.
+
