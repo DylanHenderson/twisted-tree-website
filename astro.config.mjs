@@ -21,18 +21,18 @@ export default defineConfig({
 
 					],
 				},
-				{
-					label: 'Quick Stock Documentation',
+				// {
+				// 	label: 'Quick Stock Documentation',
 				
-					items: [
-						//Each item here is one entry in the navigation menu.
+				// 	items: [
+				// 		//Each item here is one entry in the navigation menu.
 						
-						{ label: 'Getting started', link: '/quickscandocs/gettingstarted' },
-						{ label: 'Settings adjustments', link: '/quickscandocs/settings' },
-						{ label: 'Changelog', link: '/quickscandocs/changelogs' },
+				// 		{ label: 'Getting started', link: '/quickscandocs/gettingstarted' },
+				// 		{ label: 'Settings adjustments', link: '/quickscandocs/settings' },
+				// 		{ label: 'Changelog', link: '/quickscandocs/changelogs' },
 
-					],
-				},
+				// 	],
+				// },
 				{
 					label: 'Simple Calendar Documentation',
 				
