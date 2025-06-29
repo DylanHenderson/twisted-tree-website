@@ -11,6 +11,17 @@ export default defineConfig({
       customCss: ["./src/styles/custom.css"],
       sidebar: [
         {
+          label: "App documentation",
+
+          items: [
+            //Each item here is one entry in the navigation menu.
+            {
+              label: "Shopify Apps",
+              link: "/documentation/shopifyapps",
+            }
+          ],
+        },        
+        {
           label: "Scan Picker Documentation",
 
           items: [

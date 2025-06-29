@@ -1,0 +1,34 @@
+---
+title: App Documentation
+description: shopify app documentation
+---
+
+
+
+import { Image } from 'astro:assets';
+import StaggeredCardGrid from '../../../components/StaggeredCardGrid.astro';
+import ClickableCard from '../../../components/ClickableCard.astro';
+import scanpicklogo from '../../../assets/scan_picker/scan_picker.png';
+import calendarLogo from '../../../assets/cal/simple_calendar.png';
+import stockTakeLogo from '../../../assets/stock_take/twist_stock_take.png';
+
+
+
+<StaggeredCardGrid>
+	<ClickableCard href="/scanpickerdocs/gettingstarted" title="Scan Picker">
+		<Image src={scanpicklogo} alt="scan picker logo" style={{ height: '100px', width: '100px', objectFit: 'cover' }} />
+		<span>Precision check Shopify orders as you pack them for errors.</span>
+	</ClickableCard>
+	
+	<ClickableCard href="/stocktakedocs/gettingstarted" title="Twist: Stock Take">
+		<Image src={stockTakeLogo} alt="stock take logo" style={{ height: '100px', width: '100px', objectFit: 'cover' }} />
+		<span>Inventory counts with barcode scans, filters, and reports.</span>
+	</ClickableCard>
+	
+	<ClickableCard href="/simplecalendardocs/gettingstarted" title="Simple Calendar">
+		<Image src={calendarLogo} alt="calendar logo" style={{ height: '100px', width: '100px', objectFit: 'cover' }} />
+		<span>Styled event calendar from Google Calendar.</span>
+	</ClickableCard>
+</StaggeredCardGrid>
+
+

@@ -3,3 +3,38 @@
   max-height: 200px !important;
 }
 
+.hero {
+  background-image: url('/src/assets/twist_background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  min-height: 50vh;
+  padding-left: calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
+  margin-top: 0;
+  filter: brightness(1.3) opacity(0.9);
+}
+
+.hero h1,
+.hero .tagline,
+.hero .actions {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero .actions a {
+  color: white !important;
+}
+
+.hero .actions .action.primary {
+  background-color: var(--sl-color-accent) !important;
+  border-color: var(--sl-color-accent) !important;
+}
+
+.content-panel {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
