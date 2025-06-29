@@ -1,0 +1,53 @@
+---
+title: Supported Devices
+description: scan devices for stock takes
+---
+
+
+
+import cal1 from '../../../assets/cal/cal1.png';
+import cal2 from '../../../assets/cal/cal2.png';
+import cal3 from '../../../assets/cal/cal3.png';
+import cal4 from '../../../assets/cal/cal4.png';
+import cal5 from '../../../assets/cal/cal5.png';
+import cal6 from '../../../assets/cal/cal6.png';
+import cal7 from '../../../assets/cal/cal7.png';
+import cal8 from '../../../assets/cal/cal8.png';
+import cal9 from '../../../assets/cal/cal9.png';
+
+
+import reportsComparisonScreenshot from '../../../assets/stock_take/reports_comparison_type.png';
+import stock2 from '../../../assets/stock_take/stock2.png';
+
+
+
+import mainAction from '../../../assets/mainAction.png';
+import adjustment from '../../../assets/adjustment.png';
+
+
+import { Code } from '@astrojs/starlight/components';
+
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Image, } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
+
+
+### What devices can I use to scan products?
+
+##### Wireless scanner with PC/Laptop
+Grab any wireless (or wired but wireless preferred) barcode scanner and connect to your laptop or PC setup, start scanning products. These devices are fast and cost effective but may be challenging in larger warehouses to move the laptop or products for scanning.
+
+##### Wireless bluetooth scanner with mobile device
+You can use any bluetooth barcode scanner while running Twist: Stock Take through the shopify app. The scanner needs to be connected to your mobile device via bluetooth. 
+These scanners are a bit more on the expensive side but are fast and allow you to have the app running close at hand. **The scanner must be connected in Basic (HID) Mode. Application mode is not supported currently in Shopify embeded apps.**
+
+##### Wireless bluetooth scanner through Shopify POS
+You can use your normal bluetooth scanner (generally a Socket Mobile scanner) through our Shopify POS app. This works in application mode and shouldn't require any changes to the settings if using POS already.
+
+##### Mobile device with camera for barcode scanning
+The app allows you to use your phones camera for barcode scanning. This is not as fast as a handheld barcode scanner but works well for smaller inventories.
+Note that the scanner functionality in use is provided by Shopify, we have noticed some rare cases where barcodes can be more difficult to read through the Shopify scanner than an alternative handheld device.
+

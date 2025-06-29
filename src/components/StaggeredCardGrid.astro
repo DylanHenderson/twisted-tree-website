@@ -1,0 +1,26 @@
+---
+// StaggeredCardGrid.astro
+---
+
+<div class="card-grid">
+  <slot />
+</div>
+
+<style>
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .card-grid > * {
+    height: 200px;
+  }
+
+  @media (max-width: 768px) {
+    .card-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

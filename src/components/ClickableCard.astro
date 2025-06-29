@@ -1,0 +1,74 @@
+---
+// ClickableCard.astro
+export interface Props {
+  href?: string;
+  title?: string;
+}
+
+const { href, title } = Astro.props;
+---
+
+<div class="clickable-card" data-href={href}>
+  {title && <h3 class="card-title">{title}</h3>}
+  <div class="card-content">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .clickable-card {
+    background: var(--sl-color-bg-nav);
+    border: 1px solid var(--sl-color-hairline-shade);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 !important;
+    align-self: start;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+  }
+
+  .clickable-card:hover {
+    background-color: rgba(0, 123, 255, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 123, 255, 0.3);
+  }
+
+  .card-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--sl-color-white);
+  }
+
+  .card-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .card-content span {
+    flex: 1;
+    line-height: 1.5;
+    color: var(--sl-color-gray-2);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const clickableCards = document.querySelectorAll('.clickable-card[data-href]');
+    
+    clickableCards.forEach(card => {
+      card.addEventListener('click', function() {
+        const href = this.getAttribute('data-href');
+        if (href) {
+          window.open(href, '_blank', 'noopener,noreferrer');
+        }
+      });
+    });
+  });
+</script>

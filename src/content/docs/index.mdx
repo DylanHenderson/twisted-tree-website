@@ -1,12 +1,9 @@
 ---
-title: Twisted Tree Dev
-description: Get started building your docs site with Starlight.
+title: Twisted Tree
 template: splash
 hero:
   tagline: App Development Studio
-  image:
-    light: ../../assets/justlogo.png
-    dark: ../../assets/justlogol.png
+
   actions:
     - text: App Documentation
       link: /scanpickerdocs/gettingstarted/
@@ -21,35 +18,32 @@ hero:
       icon: external
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
-import scanpicklogo from '../../assets/scanpicklogo.png';
-import templatedcreatelogo from '../../assets/templatedcreatelogo.png';
-import stockcheckerlogo from '../../assets/stockchecker.png';
-
+import StaggeredCardGrid from '../../components/StaggeredCardGrid.astro';
+import ClickableCard from '../../components/ClickableCard.astro';
+import scanpicklogo from '../../assets/scan_picker/scan_picker.png';
+import calendarLogo from '../../assets/cal/simple_calendar.png';
+//import stockcheckerlogo from '../../assets/stockchecker.png';
+import stockTakeLogo from '../../assets/stock_take/twist_stock_take.png';
 
 
 
 
 ## Shopify Apps
 
-<CardGrid stagger>
-	<Card title="Scan Picker">
-	<div style={{ display: 'flex', alignItems: 'center' }}>
-		<Image src={scanpicklogo} alt="scan picker logo" style={{ height: '100px', width: '100px', objectFit: 'cover', marginRight: '10px' }} />
+<StaggeredCardGrid>
+	<ClickableCard href="https://apps.shopify.com/scan-picker" title="Scan Picker">
+		<Image src={scanpicklogo} alt="scan picker logo" style={{ height: '100px', width: '100px', objectFit: 'cover' }} />
 		<span>Precision check Shopify orders as you pack them for errors.</span>
-	</div>
-	</Card>
-	<Card title="Templated Create - Coming Soon">
-	<div style={{ display: 'flex', alignItems: 'center' }}>
-		<Image src={templatedcreatelogo} alt="scan picker logo" style={{ height: '100px', width: '100px', objectFit: 'cover', marginRight: '10px' }} />
-		<span>Product Templates for quick product creation.</span>
-	</div>
-	</Card>
-	<Card title="Quickstock: Stock Updater - Coming Soon">
-	<div style={{ display: 'flex', alignItems: 'center' }}>
-		<Image src={stockcheckerlogo} alt="scan picker logo" style={{ height: '100px', width: '100px', objectFit: 'cover', marginRight: '10px' }} />
-		<span>Scan products and update their inventories on the fly.</span>
-	</div>
-	</Card>
-</CardGrid>
+	</ClickableCard>
+	
+	<ClickableCard href="https://apps.shopify.com/simple-calendar" title="Twist: Simple Calendar">
+		<Image src={calendarLogo} alt="templated create logo" style={{ height: '100px', width: '100px', objectFit: 'cover' }} />
+		<span>Styled event calendar from Google Calendar.</span>
+	</ClickableCard>
+	
+	<ClickableCard title="Twist: Stock Take">
+		<Image src={stockTakeLogo} alt="quickstock logo" style={{ height: '100px', width: '100px', objectFit: 'cover' }} />
+		<span>Inventory counts with barcode scans, filters, and reports.</span>
+	</ClickableCard>
+</StaggeredCardGrid>

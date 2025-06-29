@@ -1,0 +1,75 @@
+---
+title: Add barcodes to your packing slips
+description: Add barcodes to your packing slips.
+---
+
+
+import uploadfile from '../../../assets/uploadfile.jpg';
+import copylink from '../../../assets/copylink.jpg';
+import shippingsection from '../../../assets/shippingsection.jpg';
+import edittemplatesection from '../../../assets/edittemplatesection.jpg';
+import edittemplate from '../../../assets/edittemplate.jpg';
+import { Code } from '@astrojs/starlight/components';
+
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+
+### Download a barcode font
+
+A barcode font is required to render a barcode on your packing slip. You can download one here.
+
+[Download Font](https://scanpickerdownloads.s3.eu-north-1.amazonaws.com/LibreBarcode39-Regular.ttf)
+
+### Upload the font to your shopify store
+
+Go to the files section under "Content" on the lefthand side menu of your store.
+
+Click Upload files in the top right of the files page and select your downloaded barcode font.
+
+Copy the link to your font, you will need this later. Click the button under "Link" for the font file you just uploaded. You can leave this page open or copy the link to a notepad.
+
+<Image src={uploadfile} alt="upload file" style={{ height: '100%', width: '100%', objectFit: 'cover', marginRight: '10px' }} />
+<br/>
+<Image src={copylink} alt="copy link" style={{ height: '100%', width: '100%', objectFit: 'cover', marginRight: '10px' }} />
+
+### Go to your packing slip template.
+
+Go to your store settings (bottom left of your main store page).
+
+Click "Shipping and delivery" and scroll to the bottom of the page until you see "Packing Slips". Click "Edit Template"
+
+<Image src={shippingsection} alt="upload file" style={{ height: '100%', width: '100%', objectFit: 'cover', marginRight: '10px' }} />
+<br/>
+<Image src={edittemplatesection} alt="copy link" style={{ height: '100%', width: '100%', objectFit: 'cover', marginRight: '10px' }} />
+
+### Configuration
+
+Paste the following code at the top of your template.
+
+NB: The src url needs to be replaced with the URL you copied earlier. Example one below.
+
+
+```html
+<style>
+@font-face {
+font-family: 'Libre Barcode 39 Text';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: url(https://cdn.shopify.com/s/files/1/0335/2959/3988/files/LibreBarcode39Text-Regular.ttf?v=1704799285) format('truetype');
+}
+</style>
+```
+
+Add the barcode below your title
+
+```html
+<div>
+    <p style="font-family: 'Libre Barcode 39 Text', cursive; font-size: 70px">*{{order.order_number}}*</p>
+</div>
+```
+
+<Image src={edittemplate} alt="upload file" style={{ height: '100%', width: '100%', objectFit: 'cover', marginRight: '10px' }} />
+

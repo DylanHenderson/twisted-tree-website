@@ -3,11 +3,33 @@ title: Changelog
 description: Scan Picker changes over time.
 ---
 
+### 21 June 2025
+* Added support for date and time tagging of checked orders.
+* Added an option to open the Shopify order when scanning an order number.
+
+### 07 May 2025
+* In some cases error notifications were showing unstyled, this has been Fixed
+* Added an option to save the progress while checking an order. 
+
+### 04 May 2025
+* Improvements for devices on unstable networks leading to crashes.
+* Display partially scanned items in yellow when checking an order.
+* Support for On-Hold products/fulfillments, you can now enable showing these for orders, they can also be filtered in the orders table.
+* Added a setting to show bin locations and edit them during checking.
+
+### 28 April 2025
+* Additional Barcode sanitization. Before this change specific barcodes including a number of special characters were not matching stored barcodes.
+
+### 14 April 2025
+* Main workflow performance improvements
+* Fixed a crash when an order contained a single custom item
+
 ### 09 April 2025
 * Added the delivery method to the orders table
 * Fixed a bug where Shopify bundles caused duplicate products to show when combined with the setting "move scanned items to the bottom of the check list"
 * Fixed a bug where variants with multiple options were sometimes being cutoff while checking on mobile.
 * Updated Shopify API version to October 2024
+* Changed pinning of Metafield Definitions when created to false by default.
 
 ### 04 April 2025
 * Added a setting to allow custom attributes to be displayed while checking orders
