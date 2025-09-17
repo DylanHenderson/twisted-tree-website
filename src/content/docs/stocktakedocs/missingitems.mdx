@@ -1,0 +1,102 @@
+---
+title: Missing Items
+description: Understanding and managing missing items during stock take review
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
+
+## Understanding Missing Items
+
+During the review phase of a stock take, Twist: Stock Take identifies items that are potentially missing from your physical inventory. These are products in your Shopify store that match your stock take filters but weren't scanned during the counting process.
+
+<Aside type="tip">
+The missing items list is generated fresh each time you enter review mode, ensuring you always see the most current data.
+</Aside>
+
+### Why Items Appear as Missing
+
+Items appear in this table when they:
+1. Match all your stock take filter criteria (tags, product type, vendor, status, etc.)
+2. Were NOT scanned during the current stock take
+3. Have inventory quantities greater than zero in your system
+
+## Managing Missing Items
+
+Once your stock take is complete and you're reviewing missing items, you have several options:
+
+### 1. Zero Out Quantities
+
+**To zero missing items:**
+1. Review the missing items list carefully
+2. Remove any items you don't want to zero (see below)
+3. Click "Zero All Missing Items"
+4. Confirm the action
+
+<Aside type="caution">
+You'll want to always double-check the list before proceeding as this will make changes to your product inventory.
+</Aside>
+
+### 2. Remove Items from the List
+
+You can selectively remove items from the missing items list to prevent them from being zeroed:
+
+- Click the remove button next to specific items
+- These items will be excluded from the bulk zero action
+- Their inventory quantities will remain unchanged
+
+**When to remove items:**
+- The item was temporarily moved or is on display
+- You know the item exists but wasn't accessible during counting
+- The item is reserved for a specific purpose
+
+### 3. Update Product Properties
+
+Instead of zeroing inventory, you might realize some items shouldn't have been included in this stock take at all. You can:
+
+<Steps>
+1. Note which items are incorrectly filtered
+2. Cancel the review
+3. Update product properties in Shopify (tags, product type, vendor, etc.)
+4. Re-process the stock take to generate a new, accurate list
+</Steps>
+
+### 4. Cancel and Re-scan
+
+If you discover items that should have been counted:
+
+<Steps>
+1. Cancel the current review
+2. Return to scanning mode
+3. Physically locate and scan the missing items
+4. Re-process the stock take with the complete count
+</Steps>
+
+## Best Practices
+
+<CardGrid>
+<Card title="Regular Reviews" icon="rocket">
+Review missing items after each stock take to maintain accurate inventory
+</Card>
+<Card title="Investigate Patterns" icon="magnifier">
+Look for patterns in missing items - they might indicate storage or categorization issues
+</Card>
+<Card title="Document Decisions" icon="document">
+Keep notes on why certain items were removed from the zero list for future reference
+</Card>
+<Card title="Verify Filters" icon="approve-check-circle">
+Ensure your filters accurately represent the inventory section you're counting
+</Card>
+</CardGrid>
+
+## Important Notes
+
+- The missing items list regenerates fresh each time you enter review mode
+- Changes to product properties in Shopify will be reflected when you re-process the stock take
+- Missing items are separate from miscategorized items (which don't match filters but were scanned)
+- The zero action only affects inventory quantities, not other product properties
+
+<LinkCard title="Learn about Filters" href="/stocktakedocs/filters" description="Understand how filters determine which items appear as missing" />

@@ -1,0 +1,105 @@
+---
+title: Miscategorized Items
+description: Understanding and managing miscategorized items during stock take review
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
+
+## Understanding Miscategorized Items
+
+During the review phase of a stock take, Twist: Stock Take identifies items that are potentially miscategorized. These are products that were scanned during your count but don't match your stock take filter criteria, indicating they may have incorrect product properties.
+
+<Aside type="tip">
+The miscategorized items list is generated fresh each time you enter review mode, ensuring you always see the most current data based on your filters.
+</Aside>
+
+### Why Items Appear as Miscategorized
+
+Items appear in this table when they:
+1. Were scanned during the current stock take
+2. Do NOT match one or more of your filter criteria (tags, product type, vendor, status, etc.)
+3. Were physically present in the area you were counting
+
+This typically indicates the product has incorrect categorization in your Shopify store.
+
+## Common Miscategorization Issues
+
+#### Product Type Mismatches
+A product scanned during a "T-Shirt" count might have its type set as "Shirt" or "Apparel" instead of the expected "T-Shirt".
+
+#### Missing or Incorrect Tags
+Products may lack required tags or have outdated tags that no longer match your current organizational structure.
+
+#### Vendor Attribution
+Items from a vendor that was acquired or rebranded might still show the old vendor name.
+
+#### Status Conflicts
+Draft products that should be active, or archived items that are still physically in stock.
+
+## Managing Miscategorized Items
+
+Once your stock take is complete and you're reviewing miscategorized items, you have several options:
+
+<Aside type="tip" title="Automatic Updates with Automations">
+You can use Stock Take Automations to automatically fix common categorization issues when actioning your stock take. For example, you could automatically add missing tags or update product status for all scanned items. Note that these automation changes happen during the actioning phase after inventory updates, so they won't appear in the review screens.
+
+<LinkCard title="Learn about Automations" href="/stocktakedocs/automations" description="Set up automatic product updates during stock take actioning" />
+</Aside>
+
+### 1. Fix Product Properties in Bulk
+
+**To update multiple products:**
+1. Review the miscategorized items list
+2. Identify common issues (e.g., all missing the same tag)
+3. Use Shopify's bulk editor to update the products
+4. Re-process the stock take to verify the fixes
+
+<Aside type="note">
+Fixing categorization issues helps ensure future stock takes are more accurate and efficient.
+</Aside>
+
+### 2. Update Individual Products
+
+For products with unique issues:
+
+<Steps>
+1. Click on the product name to open it in Shopify
+2. Update the incorrect properties (tags, type, vendor, etc.)
+3. Save the changes
+4. The item will be correctly filtered in future stock takes
+</Steps>
+
+### 3. Review Your Filter Criteria
+
+Sometimes the issue isn't with the products but with overly restrictive filters:
+
+- Consider if your filters are too narrow
+- Check if filter combinations are excluding valid products
+- Adjust filters for future stock takes if needed
+
+## The Impact of Miscategorization
+
+### On Current Stock Take
+- Miscategorized items ARE included in your count
+- Their inventory will be updated when you action the stock take
+- They appear in reports to highlight the categorization issue
+
+### On Future Stock Takes
+- Unfixed miscategorizations will continue to appear
+- May cause confusion about what should be counted
+- Can lead to incomplete counts if items are in unexpected locations
+
+
+## Important Notes
+
+- The miscategorized items list regenerates each time you enter review mode
+- Fixing categorization doesn't affect the current count but improves future stock takes
+- Miscategorized items are different from missing items (which match filters but weren't scanned)
+- Use the Automations feature to automatically fix common categorization issues during actioning
+
+<LinkCard title="Learn about Filters" href="/stocktakedocs/filters" description="Understand how filters determine which items appear as miscategorized" />
+<LinkCard title="Stock Take Automations" href="/stocktakedocs/automations" description="Automatically fix product properties during stock take actioning" />

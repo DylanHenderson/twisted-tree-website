@@ -1,0 +1,135 @@
+---
+title: Inventory Types
+description: Understanding On Hand vs Available inventory for accurate stock takes
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
+
+## Choosing Your Inventory Type
+
+When creating a stock take, you must choose which inventory type to count. This decision affects how your counts are compared to Shopify's inventory levels and how discrepancies are calculated.
+
+<Aside type="tip">
+We recommend using **On Hand inventory** with **Account for inventory changes** enabled for most situations. This provides the most straightforward counting experience while maintaining accuracy.
+</Aside>
+
+## On Hand Inventory
+
+On Hand inventory represents your **entire physical inventory**, including items that are committed to open orders but haven't shipped yet.
+
+### When to Use On Hand
+- You can physically count all items in your warehouse/store
+- Items committed to orders are still on your shelves
+- You want the simplest counting process
+- Orders haven't been picked or packed yet
+
+### How It Works
+When counting On Hand inventory:
+1. Count every physical item you can find
+2. Include items set aside for orders
+3. The app compares your count to Shopify's total on-hand quantity
+4. Discrepancies show the difference between physical count and system records
+
+<Card title="Example" icon="information">
+You have 50 units total in Shopify, with 10 committed to orders.
+For On Hand counting, you'd count all 50 physical units if they're still in your warehouse.
+</Card>
+
+## Available Inventory
+
+Available inventory represents items **available for purchase**, excluding quantities committed to open orders.
+
+### When to Use Available
+- Committed items have been physically separated or moved
+- Your warehouse has already picked items for orders
+- You only have access to uncommitted stock on shelves
+- Your fulfillment process removes items from countable areas
+
+### How It Works
+When counting Available inventory:
+1. Count only items not allocated to orders
+2. Skip items in packing/shipping areas
+3. The app compares your count to Shopify's available quantity
+4. Discrepancies show differences in uncommitted stock
+
+<Card title="Example" icon="information">
+You have 50 units total in Shopify, with 10 committed to orders.
+For Available counting, you'd count only the 40 units not committed to orders.
+</Card>
+
+## Account for Inventory Changes
+
+This critical setting (enabled by default) tracks inventory changes that occur between scanning and processing your stock take.
+
+<Aside type="caution">
+We highly recommend keeping this setting **enabled** to maintain accuracy, especially when orders are being fulfilled during your count.
+</Aside>
+
+### How It Works
+
+#### For On Hand Inventory
+- If an item ships after scanning: Subtracts shipped quantity from your count
+- If inventory is manually adjusted: Applies the adjustment to your count
+- Ensures your final count reflects the current state when processing
+
+#### For Available Inventory
+- If an item becomes committed: Subtracts newly committed quantity
+- If committed quantities change: Adjusts your count accordingly
+- If manual adjustments occur: Reflects these changes in final calculations
+
+### Example Scenario
+<Steps>
+1. You scan 100 units of Product A
+2. During your count, 5 units ship to customers
+3. When processing, the app automatically adjusts your count to 95
+4. Your inventory update will be accurate despite the mid-count shipment
+</Steps>
+
+## Special Setting: Treat Extra Counted Stock as Committed
+
+This setting is **only available for Available inventory** counting and helps handle situations where committed stock hasn't been physically separated.
+
+### When This Helps
+In busy warehouses where:
+- Stock moves constantly for order fulfillment
+- Committed items might still be on regular shelves
+- Physical separation of orders happens gradually
+- You're counting during active fulfillment periods
+
+### How It Works
+When your counted quantity exceeds Shopify's available stock:
+1. The app checks if there are committed items on open orders
+2. Assumes the "extra" units you counted are committed stock
+3. Adjusts the count to avoid overstating available inventory
+
+<Aside type="note" title="Potential Trade-off">
+While this setting prevents overstating inventory in dynamic warehouses, it may occasionally result in understating inventory if the extra items aren't actually committed stock. Use this setting when you know committed items might still be mixed with available stock.
+</Aside>
+
+### Example
+- Shopify shows: 40 available, 10 committed (50 total)
+- You count: 45 units on shelves
+- With setting ON: App assumes 5 of the 45 are committed items not yet moved
+- Final available count: 40 (matching expected available quantity)
+
+## Recommendations
+
+<CardGrid>
+<Card title="Best Practice" icon="approve-check-circle">
+**Use On Hand inventory** with "Account for inventory changes" enabled for most accurate results
+</Card>
+<Card title="Active Fulfillment" icon="rocket">
+Keep "Account for inventory changes" ON when shipping during counts
+</Card>
+<Card title="Separated Stock" icon="seti:todo">
+Use Available inventory only when committed items are physically separated
+</Card>
+<Card title="Mixed Stock" icon="warning">
+Enable "Treat extra as committed" only in dynamic warehouse environments
+</Card>
+</CardGrid>
+
+<LinkCard title="Getting Started" href="/stocktakedocs/gettingstarted" description="Learn how to create your first stock take" />

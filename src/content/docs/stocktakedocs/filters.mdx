@@ -42,11 +42,88 @@ The benefits of filters include:
 2. **Identifying miscategorized items**: Once you have finished counting products for your stock take, you will be able to view items that are possibly miscategorized. These items are not included in your stock take filters but were still scanned during the stock take. You may want to update their categorization.
 
 ##### The currently supported filters:
-Tags, Product types, Status, Vendors, Metafields.
+Tags, Product types, Status, Vendors, Metafields, Specific Products
 
 {/* <Aside type="caution" title="Metafield Support">
 We currently only support single line text field metafields on filters. Please reach out if you require additional support.
 </Aside> */}
+
+## Example: T-Shirt Inventory Count
+
+Let's walk through a practical example of using filters to count T-shirts in your store.
+
+### Setting Up Filters
+
+Imagine you want to count all T-shirts in your store. You would set up filters like:
+
+<Card>
+**Filter Configuration:**
+- **Product Type:** "T-Shirt" or "Apparel/T-Shirt"
+- **Tags:** "clothing", "tops", "summer-collection"
+- **Vendor:** "Premium Tees Co"
+- **Status:** "Active"
+</Card>
+
+### During the Stock Take
+
+You proceed to count your T-shirt inventory. The system expects to find all products matching your filter criteria.
+
+### After Counting: Identifying Issues
+
+#### 1. Missing Items
+
+<Aside type="tip">
+**Scenario:** You have a "Vintage Band T-Shirt" in your inventory that wasn't scanned during the count.
+
+**Why it's flagged as missing:**
+- Product Type: ✅ "T-Shirt"
+- Tags: ✅ Has "clothing", "tops", "summer-collection"
+- Vendor: ✅ "Premium Tees Co"
+- Status: ✅ "Active"
+
+This item matches ALL filter criteria but wasn't counted. It appears in your "Missing Items" report, indicating it might be:
+- Misplaced in the store
+- Out for display
+- Actually out of stock but not updated in the system
+</Aside>
+
+#### 2. Miscategorized Items
+
+<Aside type="caution">
+**Scenario:** You scanned a "Graphic Tank Top" during your T-shirt count.
+
+**Why it's flagged as miscategorized:**
+- Product Type: ❌ "Tank Top" (not "T-Shirt")
+- Tags: ⚠️ Has "clothing" and "tops" but missing "summer-collection"
+- Vendor: ✅ "Premium Tees Co"
+- Status: ✅ "Active"
+
+**Reason for miscategorization:** This item was scanned but doesn't match your T-shirt filters. The issues are:
+1. Wrong product type ("Tank Top" instead of "T-Shirt")
+2. Missing the "summer-collection" tag
+
+**Action needed:** Either:
+- Update the product type if it's actually a T-shirt
+- Add missing tags if appropriate
+- Exclude from this count if it's correctly categorized as a tank top
+</Aside>
+
+### Benefits of This Approach
+
+<CardGrid>
+<Card title="Accurate Counts" icon="approve-check-circle">
+Only count products that truly belong in your T-shirt category
+</Card>
+<Card title="Error Detection" icon="warning">
+Quickly identify products with incorrect tags or categorization
+</Card>
+<Card title="Inventory Insights" icon="information">
+Discover missing items that need to be located or written off
+</Card>
+<Card title="Data Cleanup" icon="pencil">
+Use miscategorization reports to improve your product data
+</Card>
+</CardGrid>
 
 
 

@@ -49,10 +49,13 @@ export default defineConfig({
 
             { label: "Getting started", link: "/stocktakedocs/gettingstarted" },
             { label: "Supported devices", link: "/stocktakedocs/devices" },
+            { label: "Inventory Types", link: "/stocktakedocs/inventorytypes" },
 
             { label: "Stock take filters", link: "/stocktakedocs/filters" },
             { label: "Stock take automations", link: "/stocktakedocs/automations" },
-            
+            { label: "Missing items", link: "/stocktakedocs/missingitems" },
+            { label: "Miscategorized Items", link: "/stocktakedocs/miscategorizeditems" },
+
 
             { label: "Changelog", link: "/stocktakedocs/changelogs" },
 

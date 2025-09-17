@@ -3,32 +3,18 @@ title: App Documentation
 description: shopify app documentation
 ---
 
-
-
 import { Image } from 'astro:assets';
-import StaggeredCardGrid from '../../../components/StaggeredCardGrid.astro';
-import ClickableCard from '../../../components/ClickableCard.astro';
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
 import scanpicklogo from '../../../assets/scan_picker/scan_picker.png';
 import calendarLogo from '../../../assets/cal/simple_calendar.png';
 import stockTakeLogo from '../../../assets/stock_take/twist_stock_take.png';
 
 
 
-<StaggeredCardGrid>
-	<ClickableCard href="/scanpickerdocs/gettingstarted" title="Scan Picker">
-		<Image src={scanpicklogo} alt="scan picker logo" style={{ height: '100px', width: '100px', objectFit: 'cover' }} />
-		<span>Precision check Shopify orders as you pack them for errors.</span>
-	</ClickableCard>
-	
-	<ClickableCard href="/stocktakedocs/gettingstarted" title="Twist: Stock Take">
-		<Image src={stockTakeLogo} alt="stock take logo" style={{ height: '100px', width: '100px', objectFit: 'cover' }} />
-		<span>Inventory counts with barcode scans, filters, and reports.</span>
-	</ClickableCard>
-	
-	<ClickableCard href="/simplecalendardocs/gettingstarted" title="Simple Calendar">
-		<Image src={calendarLogo} alt="calendar logo" style={{ height: '100px', width: '100px', objectFit: 'cover' }} />
-		<span>Styled event calendar from Google Calendar.</span>
-	</ClickableCard>
-</StaggeredCardGrid>
+## Our Apps
+<LinkCard title="Scan Picker - Getting Started" href="/scanpickerdocs/gettingstarted" description="Learn how to set up and use Scan Picker for order verification" />
+<LinkCard title="Stock Take - Getting Started" href="/stocktakedocs/gettingstarted" description="Begin managing your inventory with Twist: Stock Take" />
+<LinkCard title="Simple Calendar - Getting Started" href="/simplecalendardocs/gettingstarted" description="Set up and customize your Google Calendar integration" />
 
 
