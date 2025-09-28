@@ -2,48 +2,64 @@
 title: Twisted Tree
 template: splash
 hero:
-  tagline: App Development Studio
-
+  tagline: Shopify App Development Studio
   actions:
-    - text: App Documentation
+    - text: View Documentation
       link: /documentation/shopifyapps/
       icon: right-arrow
       variant: primary
+    - text: Our Apps on Shopify
+      link: https://apps.shopify.com/partners/twisted-tree
+      icon: external
+      variant: secondary
     - text: Contact Us
       link: /twistedtree/contactdetails/
       icon: right-arrow
-      variant: secondary	  
-    - text: Shopify Apps
-      link: https://apps.shopify.com/partners/twisted-tree
-      icon: external
+      variant: minimal
 ---
 
-import { Image } from 'astro:assets';
-import StaggeredCardGrid from '../../components/StaggeredCardGrid.astro';
-import ClickableCard from '../../components/ClickableCard.astro';
-import scanpicklogo from '../../assets/scan_picker/scan_picker.png';
-import calendarLogo from '../../assets/cal/simple_calendar.png';
-//import stockcheckerlogo from '../../assets/stockchecker.png';
-import stockTakeLogo from '../../assets/stock_take/twist_stock_take.png';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
+## Our Shopify Apps
 
+<CardGrid>
+<LinkCard
+  title="Scan Picker"
+  description="Precision check orders as you pack. Reduce errors and improve fulfillment accuracy."
+  href="https://apps.shopify.com/scan-picker"
+/>
 
+<LinkCard
+  title="Twist: Stock Take"
+  description="Complete inventory management with barcode scanning and smart reporting."
+  href="https://apps.shopify.com/twist-stock-take"
+/>
 
-## Shopify Apps
+<LinkCard
+  title="Simple Calendar"
+  description="Beautiful event calendar with seamless Google Calendar integration."
+  href="https://apps.shopify.com/simple-calendar"
+/>
+</CardGrid>
 
-<StaggeredCardGrid>
-	<ClickableCard href="https://apps.shopify.com/scan-picker" title="Scan Picker">
-		<Image src={scanpicklogo} alt="scan picker logo" style={{ height: '100px', width: '100px', objectFit: 'cover' }} />
-		<span>Precision check Shopify orders as you pack them for errors.</span>
-	</ClickableCard>
-	
-	<ClickableCard href="https://apps.shopify.com/simple-calendar" title="Twist: Simple Calendar">
-		<Image src={calendarLogo} alt="templated create logo" style={{ height: '100px', width: '100px', objectFit: 'cover' }} />
-		<span>Styled event calendar from Google Calendar.</span>
-	</ClickableCard>
-	
-	<ClickableCard href="https://apps.shopify.com/twist-stock-take"  title="Twist: Stock Take">
-		<Image src={stockTakeLogo} alt="quickstock logo" style={{ height: '100px', width: '100px', objectFit: 'cover' }} />
-		<span>Inventory counts with barcode scans, filters, and reports.</span>
-	</ClickableCard>
-</StaggeredCardGrid>
+## Documentation
+
+<CardGrid>
+<LinkCard
+  title="Scan Picker Docs"
+  description="Setup guides and tutorials"
+  href="/scanpickerdocs/gettingstarted"
+/>
+
+<LinkCard
+  title="Stock Take Docs"
+  description="Learn inventory counting features"
+  href="/stocktakedocs/gettingstarted"
+/>
+
+<LinkCard
+  title="Calendar Docs"
+  description="Configuration and customization"
+  href="/simplecalendardocs/gettingstarted"
+/>
+</CardGrid>

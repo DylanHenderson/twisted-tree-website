@@ -56,6 +56,7 @@ export default defineConfig({
             { label: "Missing items", link: "/stocktakedocs/missingitems" },
             { label: "Miscategorized Items", link: "/stocktakedocs/miscategorizeditems" },
 
+            { label: "Account Limits", link: "/stocktakedocs/accountlimits" },
 
             { label: "Changelog", link: "/stocktakedocs/changelogs" },
 
