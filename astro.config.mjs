@@ -38,6 +38,7 @@ export default defineConfig({
               label: "Packing slips template",
               link: "/scanpickerdocs/packingslipstemplate",
             },
+             { label: "Connecting inventory updates to Shopify Flow", link: "/scanpickerdocs/shopifyflow" },
             { label: "Changelog", link: "/scanpickerdocs/changelogs" },
           ],
         },

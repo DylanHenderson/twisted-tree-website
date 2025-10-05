@@ -1,0 +1,71 @@
+---
+title: Shopify Flow Integration
+description: Using Shopify Flow triggers to track inventory changes
+---
+
+import enableShopifyFlow1 from '../../../assets/shopify_flow/enableShopyifyFlow1.png';
+import enableShopifyFlow2 from '../../../assets/shopify_flow/enableShopifyFlow2.png';
+import createTrigger from '../../../assets/shopify_flow/createTrigger.png';
+import createAction from '../../../assets/shopify_flow/createAction.png';
+import googleSheetsInstallation from '../../../assets/shopify_flow/googleSheetsInstallation.png';
+import spreadsheetConfigurationWithVariables from '../../../assets/shopify_flow/spreadsheetConfigurationWithVariables.png';
+import completeWorkflow from '../../../assets/shopify_flow/completeWorkflow.png';
+
+import { Image } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+Scan Picker's inventory updater sends out Shopify Flow events that can be used to keep track of inventory changes made through Scan Picker. This allows you to automate workflows and maintain records of inventory adjustments.
+
+<Aside type="note">
+This feature is currently only available for the inventory updater.
+</Aside>
+
+<Steps>
+
+1. **Enable Shopify Flow triggers**
+
+   Go to Scan Picker settings and navigate to **General > Enable Shopify Flow triggers**.
+
+   <Image src={enableShopifyFlow1} alt="Enable Shopify Flow triggers" style={{ height: '50%', objectFit: 'cover', marginRight: '10px' }} />
+   <br/>
+   <Image src={enableShopifyFlow2} alt="Enable Shopify Flow triggers setting" style={{ height: '100%', width: '100%', objectFit: 'cover', marginRight: '10px' }} />
+
+2. **Create a new Shopify Flow workflow**
+
+   In Shopify Flow, create a new workflow and select **Scan Picker > Inventory Adjustment** as the trigger.
+
+   <Image src={createTrigger} alt="Create trigger" style={{ height: '100%', width: '100%', objectFit: 'cover', marginRight: '10px' }} />
+
+3. **Create an action from the Scan Picker trigger**
+
+   Click to add an action from the Scan Picker trigger.
+
+   <Image src={createAction} alt="Create action from trigger" style={{ height: '100%', width: '100%', objectFit: 'cover', marginRight: '10px' }} />
+
+4. **Install Google Sheets for Shopify Flow**
+
+   Ensure Google Sheets for Shopify Flow is installed. In the action menu, you can deselect the "installed apps" filter and install it from there if needed.
+
+   <Image src={googleSheetsInstallation} alt="Google Sheets installation in Shopify Flow" style={{ height: '100%', width: '100%', objectFit: 'cover', marginRight: '10px' }} />
+
+5. **Select the "Add row to spreadsheet" action**
+
+   Choose the "Add row to spreadsheet" action from Google Sheets.
+
+6. **Configure the spreadsheet connection**
+
+   - Paste the URL from a new Google spreadsheet in the **Spreadsheet URL** field
+   - Enter the **Tab name**
+   - Click **Add variable** to start adding row contents for the spreadsheet
+   - A good choice of variables includes: `variantDisplayName`, `dateUtc`, and `amount`
+
+   <Image src={spreadsheetConfigurationWithVariables} alt="Spreadsheet configuration with variables" style={{ height: '100%', width: '100%', objectFit: 'cover', marginRight: '10px' }} />
+
+7. **Activate the workflow**
+
+   Turn the workflow on and the spreadsheet will automatically populate every time an inventory adjustment is made.
+
+   <Image src={completeWorkflow} alt="Complete workflow example" style={{ height: '100%', width: '100%', objectFit: 'cover', marginRight: '10px' }} />
+
+</Steps>
